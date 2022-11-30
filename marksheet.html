@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARK</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .container{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .forms{
+            padding-top: 50px;
+        }
+        table{
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        table,tr,th,td{
+            border: solid 1px;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="mark">
+        <section class="container" >
+            <div class="forms">
+                <table id="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>tamil</th>
+                        <th>English</th>
+                        <th>Maths</th>
+                        <th>Science</th>
+                        <th>S.science</th>
+                        <th>Total</th>
+                    </tr>
+                </table>
+                <form>
+                    <input type="text" placeholder="Name" id="name">
+                    <input type="text" placeholder="Tamil" id="tam">
+                    <input type="text" placeholder="English" id="eng">
+                    <input type="text" placeholder="Maths" id="math">
+                    <input type="text" placeholder="Science" id="scie">
+                    <input type="text" placeholder="Social" id="soci">
+                </form>
+                <button onclick="result()">Result</button>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        let name = document.getElementById("name");
+            tamil = document.getElementById("tam");
+            english = document.getElementById("eng");
+            maths = document.getElementById("math");
+            science = document.getElementById("scie");
+            social = document.getElementById("soci");
+
+            var a=0;
+
+            var add1=0,add2=0,add3=0,add4=0,add5=0,add6=0;
+
+            function result(){
+                let table = document.getElementById("table");
+                    tablerow= table.insertRow(table.length);
+                    tablecell1 =tablerow.insertCell(0);
+                    tablecell2 = tablerow.insertCell(1);
+                    tablecell3 = tablerow.insertCell(2);
+                    tablecell4 = tablerow.insertCell(3);
+                    tablecell5 = tablerow.insertCell(4);
+                    tablecell6 = tablerow.insertCell(5);
+                    tablecell7 = tablerow.insertCell(6);
+
+
+
+                    tablecell1.innerText = name.value
+                    tablecell2.innerText = tamil.value
+                    tablecell3.innerText = english.value
+                    tablecell4.innerText = maths.value
+                    tablecell5.innerText = science.value
+                    tablecell6.innerText = social.value
+
+                   
+                add1+=tamil.value;
+                add2+=english.value;
+                add3+=maths.value;
+                add4+=science.value;
+                add5+=social.value;
+            
+                console.log(add1)
+
+
+               a+=parseInt(add1) 
+               a+=parseInt(add2) 
+               a+=parseInt(add3) 
+               a+=parseInt(add4) 
+               a+=parseInt(add5) 
+               console.log(a)
+
+                tablecell7.innerText=a;
+            }
+
+    </script>
+</body>
+</html>
